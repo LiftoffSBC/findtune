@@ -1,6 +1,8 @@
 var apiKey = "OTZjM2VhNDgtNTRkNi00ZGI0LWFhYWItOWJjYjhlMGQzODg5";
-var bandName = "heart";
-var queryURL = "https://api.napster.com/v2.2/artists/" + bandName + "?apikey=" + apiKey;
+var bandName = "the beatles";
+var fixedBandName = bandName.split(' ').join('-');
+var queryURL = "https://api.napster.com/v2.2/artists/" + fixedBandName + "?apikey=" + apiKey;
+console.log(queryURL)
 var images = [];
 $.ajax({
   url: queryURL,
