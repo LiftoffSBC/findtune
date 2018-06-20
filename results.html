@@ -2,68 +2,36 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Music Search</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-  <div class="background">
-    <br>
-    <div class="columns">
-      <div class="column">
-        <p class="title">
-          LOGO
-        </p>
-        <p class="subtitle">
-          Search Over 45 Million Songs
-        </p></div>
-      <div class="column is-half">
-    <section class="hero is-clear is-large">
-        <div class="hero-head has-text-centered">
-            <input class="input is-rounded" type="text" placeholder="Rounded input">
-            <br><br>
-            <a class="button is-clear is-rounded">Rounded</a>
-        </div>
-      
-        <div class="hero-body">
-          <div class="container has-text-centered">
-          </div>
-        </div>
-      
-        <div class="hero-foot">
-          <nav class="tabs is-boxed is-fullwidth">
-            <div class="container">
-              <ul>
-                <li class="is-active">
-                  <a>Overview</a>
-                </li>
-                <li>
-                  <a>Modifiers</a>
-                </li>
-                <li>
-                  <a>Grid</a>
-                </li>
-                <li>
-                  <a>Elements</a>
-                </li>
-                <li>
-                  <a>Components</a>
-                </li>
-                <li>
-                  <a>Layout</a>
-                </li>
-              </ul>
+
+
+    <div class="columns is-mobile main-results">
+        <div class="column is-half is-offset-one-quarter">
+            <p class="title">
+                LOGO
+            </p>
+            <p class="subtitle">
+                Search Over 45 Million Songs
+            </p>
+            <div id="search" class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input is-expanded" type="text" placeholder="Search Songs" onclick="window.location.href='results.html'">
+                </div>
+                <div class="control is-full-width">
+                    <a class="button">
+                        Search
+                    </a>
+                </div>
             </div>
-          </nav>
         </div>
-      </section>
-      </div>
-      <div class="column"></div>
-    </div>
     </div>
 </body>
 
