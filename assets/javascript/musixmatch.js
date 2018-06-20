@@ -4,14 +4,12 @@ jQuery.ajaxPrefilter(function (options) {
     }
   });
   jQuery.ajaxSettings.traditional = true;
-  // https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=101516356&apikey=27b1b9c9a65fd7e140176cc0d63d7304
-
-  // https://api.musixmatch.com/ws/1.1/track.search?q_track=%22Layla%22&apikey=27b1b9c9a65fd7e140176cc0d63d7304
   var searchURL =
-    "https://api.musixmatch.com/ws/1.1/track.search?q_track=%22Layla%22&"
+    "https://api.musixmatch.com/ws/1.1/track.search?q_track=%22Purple%22Rain%22&"
   var lyricURL = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id="
 
   var key = "apikey=27b1b9c9a65fd7e140176cc0d63d7304"
+  console.log(lyricURL);
   $.ajax({
     // Go get the song details
     url: searchURL + key,
@@ -19,7 +17,7 @@ jQuery.ajaxPrefilter(function (options) {
   }).done(function (response) {
     var parsed = JSON.parse(response);
     var myTracks = parsed.message.body.track_list
-    console.log(JSON.stringify(myTracks, null, 4, ));
+    //console.log(JSON.stringify(myTracks, null, 4, ));
     // now go get the lyrics
     for (var i = 0; i < myTracks.length; i++) {
 
