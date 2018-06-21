@@ -5,7 +5,7 @@ $("#submit-button").on("click", function (event) {
   // initial variable to grab bands from search input
   var search = $("#search-input").val().trim()
   var fixedBandName = search.split(' ').join('-');
-  var images = [];
+  // var images = [];
 
 
   var apiKey = "OTZjM2VhNDgtNTRkNi00ZGI0LWFhYWItOWJjYjhlMGQzODg5";
@@ -17,6 +17,7 @@ $("#submit-button").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
+    console.log(response)
     // current artist name
     var artistID = response.artists[0].id;
     //current artist bio
@@ -28,15 +29,30 @@ $("#submit-button").on("click", function (event) {
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function (response) {
-      for (var i = 0; i < 10; i++) {
-        images[i] = response.artists[i].links.images;
-        var img = $("<img>");
-        img.attr("src", response.artists[i].links.images);
-        console.log(images[i]);
+    }).then(function (res) {
+      console.log("image response: ");
+      console.log(res);
+      for (var i = 0; i < 4; i++) {
+        apiKey = "OTZjM2VhNDgtNTRkNi00ZGI0LWFhYWItOWJjYjhlMGQzODg5";
+        var imageURL = res.artists[i].links.images.href + "?apikey=" + apiKey;
+        
+        $.ajax({
+          url: imageURL,
+          method: "GET"
+        }).done(function(imageRes) {
+          console.log("image res -----------------")
+          console.log(imageRes);
+          var imageSrc = imageRes.images[0].url;
+          console.log(imageSrc)
+          $(".carousel-image-four").attr("src", imageSrc);
+        })
+        
+        
+        
+        
+        
+        
       }
-
-
     })
     // current artist image
     var queryURL = 'https://api.napster.com/v2.2/artists/' + artistID + '/images?apikey=' + apiKey;
@@ -46,10 +62,8 @@ $("#submit-button").on("click", function (event) {
       method: "GET"
 
     }).then(function (response) {
-
       image = response.images[0].url;
-      console.log(image);
-      $("#artist-image").append(image);
+      $("#artist-image").attr("src", response.images[0].url);
 
     });
   })
