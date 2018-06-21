@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-<!--Results wrapper is hidden at first-->
+    <!--Results wrapper is hidden at first-->
     <div id="results">
         <div class="columns is-mobile main-results">
             <div class="column is-half is-offset-one-quarter">
@@ -46,7 +46,7 @@
 
                 <div id="search" class="field has-addons">
                     <div class="control is-expanded">
-                        <input class="input is-expanded search-input is-danger" type="text" placeholder="Search Artists" id="search-input">
+                        <input class="input is-expanded search-input is-danger " type="text" placeholder="Search Artists" id="search-input">
                     </div>
                     <div class="control is-full-width">
                         <a class="button is-black is-danger" onclick="window.location.href='results.html'" id="submit-button">
@@ -59,43 +59,53 @@
         <div class="columns is-mobile">
             <div class="column"></div>
             <div class="column">
-                <img id="artist-image">
-                <h2 id="artist-name">(Artist Name)</h2>
+                <div id="image-box">
+                    <img id="artist-image">
+                    <h2 id="artist-name">(Artist Name)</h2>
+                </div>
+
             </div>
             <div class="column">
-                <p id="artist-bio"></p>
+                <p id="artist-bio">(Artist Bio)</p>
             </div>
             <div class="column"></div>
         </div>
         <div class="columns is-mobile">
+            <img class="test-image">
             <div class="column is-half is-offset-one-quarter" id="similar-artists">
                 <h1 id="sim-art-head">Similar Artists:</h1>
                 <!-- Flickity HTML init -->
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
                     <div class="carousel-cell">
-                        <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Fleetwood_Mac_%281977%29.jpg/220px-Fleetwood_Mac_%281977%29.jpg"
-                            alt="">
+                        <img class="carousel-image c0" src="" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <p>ONE</p>
+                        <img class="carousel-image c1" src="" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <p>ONE</p>
+                        <img class="carousel-image c2" src="" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <p>ONE</p>
+                        <img class="carousel-image c3" src="" alt="" />
                     </div>
                     <div class="carousel-cell">
-                        <p>ONE</p>
+                        <img class="carousel-image c4" src="" alt="" />
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter" id="lyricsDiv">
+                <h2>Lyrics By: </h2>
+                <h2 id="artist-name-lower">(Artist Name)</h2>
+                <p id="lyrics"></p>
             </div>
         </div>
     </div>
     <!-- JavaScript for carousel-->
     <script src="assets/javascript/app.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    
+
 </body>
 
 
