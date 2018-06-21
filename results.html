@@ -2,37 +2,69 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Results</title>
+    <title>Findtune/Results</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-
-
     <div class="columns is-mobile main-results">
         <div class="column is-half is-offset-one-quarter">
-            <p class="title">
-                LOGO
-            </p>
-            <p class="subtitle">
-                Search Over 45 Million Songs
-            </p>
+            <img id="findtune-logo" src="assets/images/findtune_logo.png" alt="placeholder" onclick="window.location.href='index.html'">
+
             <div id="search" class="field has-addons">
                 <div class="control is-expanded">
-                    <input class="input is-expanded" type="text" placeholder="Search Songs" onclick="window.location.href='results.html'">
+                    <input class="input is-expanded search-input" type="text" placeholder="Search Songs" id="search-input">
                 </div>
                 <div class="control is-full-width">
-                    <a class="button">
+                    <a class="button is-black" onclick="window.location.href='results.html'" id="submit-button">
                         Search
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <div class="columns is-mobile">
+        <div class="column"></div>
+        <div class="column">
+            <img id="artist-image">
+            <h2 id="artist-name">(Artist Name)</h2>
+        </div>
+        <div class="column">
+            <p id="artist-bio"></p>
+        </div>
+        <div class="column"></div>
+    </div>
+    <div class="columns is-mobile">
+        <div class="column is-half is-offset-one-quarter" id="similar-artists">
+            <h1 id="sim-art-head">Similar Artists:</h1>
+            <!-- Flickity HTML init -->
+            <div class="carousel" data-flickity='{ "wrapAround": true }'>
+                <div class="carousel-cell">
+                    <img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Fleetwood_Mac_%281977%29.jpg/220px-Fleetwood_Mac_%281977%29.jpg"
+                        alt="">
+                </div>
+                <div class="carousel-cell">
+                    <p>ONE</p>
+                </div>
+                <div class="carousel-cell">
+                    <p>ONE</p>
+                </div>
+                <div class="carousel-cell">
+                    <p>ONE</p>
+                </div>
+                <div class="carousel-cell">
+                    <p>ONE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- JavaScript for carousel-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>
