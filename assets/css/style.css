@@ -3,6 +3,16 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    color: white;
+}
+
+body {
+    color: white;
+}
+
+#findtune-logo {
+    width: 407px;
+    height: 233px;;
 }
 
 .title {
@@ -15,7 +25,7 @@ html {
 }
 
 .main {
-    margin-top: 15%;
+    margin-top: 1%;
     text-align: center;
 }
 
@@ -26,3 +36,64 @@ html {
 #search {
     justify-content: center
 }
+
+#sim-art-head {
+    font-size: 32px;
+}
+
+#artist-name {
+    font-size: 28px;
+}
+
+/* Carousel */
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+.carousel {
+ 
+  }
+  
+  .carousel-cell {
+    width: 356px;
+    height: 237px;
+    margin-right: 10px;
+    background: black;
+    border-radius: 5px;
+    border-color: red;
+    /* counter-increment: carousel-cell; */
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+
+  }
+  
+.carousel-image {
+    width: 100%
+}
+
+#artist-image{
+    width: 356px;
+    height: 237px;
+}
+
+#results {
+    display: none;
+}
+
+.input, #submit-button {
+    background-color: black;
+    border-color: red;
+    color: white;
+}
+
+
+Add CommentCollapse 
+Message Input
+
+Message Morgan Bradley, Missy Norman412, Austin Dailly
