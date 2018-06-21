@@ -1,3 +1,4 @@
+
 $("#submit-button").on("click", function (event) {
   event.preventDefault();
 
@@ -11,6 +12,7 @@ $("#submit-button").on("click", function (event) {
   var queryURL = "https://api.napster.com/v2.2/artists/" + fixedBandName + "?apikey=" + apiKey;
 
 
+
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -22,6 +24,7 @@ $("#submit-button").on("click", function (event) {
     // similar artist images
     var queryURL = 'https://api.napster.com/v2.2/artists/' + artistID + '/similar?apikey=' + apiKey;
 
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -32,6 +35,7 @@ $("#submit-button").on("click", function (event) {
         img.attr("src", response.artists[i].links.images);
         console.log(images[i]);
       }
+
 
     })
     // current artist image
@@ -49,6 +53,7 @@ $("#submit-button").on("click", function (event) {
 
     });
   })
+
   //show/hide results div   
   $("#results").show();
   $("#main").hide();
@@ -57,5 +62,6 @@ $("#submit-button").on("click", function (event) {
 // submit button and take search-input
 console.log(search);
  
+
 
 
