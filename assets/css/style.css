@@ -57,7 +57,7 @@ body {
     width: 356px;
     height: 237px;
     margin-right: 10px;
-    background: black;
+    background-color: rgba(0, 0, 0, 0.85);
     border-radius: 5px;
     border-color: red;
     /* counter-increment: carousel-cell; */
@@ -80,6 +80,7 @@ body {
 #artist-image{
     width: 356px;
     height: 237px;
+    margin: 0 auto;
 }
 
 #results {
@@ -87,6 +88,62 @@ body {
 }
 
 .input, #submit-button {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
     border-color: red;
-    color: white;
+    color: #c7c7c7;
+}
+
+#artist-bio {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 356px;
+    height: 297px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    color: #c7c7c7;
+    font-size: 27px;
+}
+
+#image-box {
+    width: 356px;
+    height: 297px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #c7c7c7;
+}
+
+#similar-artists {
+    width: 50%;
+    height: 355px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #c7c7c7;
+}
+
+#lyricsDiv {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #c7c7c7;
+}
+
+#artist-name-lower {
+    font-size: 27px;
+}
